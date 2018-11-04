@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import Sidebar from '../Sidebar';
-import Map from '../Map';
+import Sidebar from '../Sidebar/index';
+import Map from '../Map/index';
 
 class App extends PureComponent {
   state = {
@@ -13,9 +13,10 @@ class App extends PureComponent {
   };
 
   render() {
+    console.log(this.state.object);
     return (
       <>
-        <Sidebar/>
+        <Sidebar setObject={this.setObject}/>
         <Map/>
       </>
     )
