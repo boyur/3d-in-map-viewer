@@ -13,11 +13,10 @@ class App extends PureComponent {
   };
 
   render() {
-    console.log(this.state.object);
     return (
       <>
         <Sidebar setObject={this.setObject}/>
-        <Map/>
+        <Map object={this.state.object}/>
       </>
     )
   }
